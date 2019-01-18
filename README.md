@@ -1,6 +1,9 @@
-# Hugo.io - Classic Theme
+# Hugo.io - Werx Theme
 
-Classic is forked from the **XMin** theme, written by [Yihui Xie](https://yihui.name). I made a fresh remix of it for my [personal blog](https://goodroot.ca). It provides some simplifications, `highlight.js` for syntax highlighting, emoji support, and slick fonts.
+Werx started as a fork of the **Classic** theme, written by [goodroot](https://goodroot.ca). I
+used this as the base for Werx, which is a port of the [werc][http://werc.cat-v.org] default 
+theme. 
+
 
 ### Instructions
 
@@ -25,12 +28,12 @@ cd classic/themes
 4: Clone the repo
 
 ```
-git clone git@github.com:goodroot/hugo-classic.git
+git clone git@github.com:pard68/hugo-werx.git
 ```
 
 5: Copy the `content/`, `static/css`, and `config.toml` from the `exampleSite` directory into the classic directory. The existing `content/`, `static/css`, and `config.toml` files will be over-written. 
 
-6: Run `hugo server` within `classic/` and enjoy and customize to your hearts content!
+6: Run `hugo server` within `werx/` and enjoy and customize to your hearts content!
 
 ### New Posts
 
@@ -64,10 +67,3 @@ Change `color:` to a nice matching colour.
 
 #### Screenshot
 
-![Screenshot of Hugo Classic](https://github.com/goodroot/hugo-classic/raw/master/images/screenshot.png)
-
-## Blog Posts
-
-hugo-classic has appeared in...
-
-[15 Hugo Framework blog themes](https://terrty.net/2018/15-hugo-framework-blog-themes/) by [paskal](https://github.com/paskal)
