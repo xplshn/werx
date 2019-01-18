@@ -1,0 +1,14 @@
+</div>
+<div id="footer">
+	<div class="pull-left">
+		<a href="https://gohugo.io">Powered by Hugo.</a>
+	</div>
+      {{ partial "foot_custom.html" . }}
+      {{ with .Site.Params.footer }}
+      <div class="pull-right">
+	      {{ . | markdownify }}
+	      {{ end }}
+      </div>
+    </div>
+  </body>
+</html>

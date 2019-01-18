@@ -1,0 +1,12 @@
+<div id="sidebar">
+	<div>
+		{{ $currentPage := . }}
+		{{ range .Site.Menus.main }}
+		{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+		<a class="thisPage" href="{{ .URL }}" title="{{ .Title }}">>>{{ .Name }}</a>
+		{{ else }}
+		<a href=" {{ .URL }}" title="{{ .Title }}">>{{ .Name }}</a>
+		{{ end }}
+		{{ end }}
+	</div>
+</div>
