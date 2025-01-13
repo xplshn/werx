@@ -1,21 +1,15 @@
-{{ partial "header.html" . }}
-
-{{if not .IsHome }}
-<h1>{{ .Title }}</h1>
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages.GroupByDate "January 2006" }}
+    <h2>{{ .Key }}</h2>
+    <ul>
+      {{ range .Pages }}
+        <li>
+          <span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
 {{ end }}
-
-{{ .Content }}
-
-{{ range .Pages.GroupByDate "January 2006" }}
-<h2>{{ .Key }}</h3>
-<ul>
-	{{ range .Pages }}
-	<li>
-		<span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
-		<a href="{{ .URL }}">{{ .Title }}</a>
-	</li>
-	{{ end }}
-</ul>
-{{ end }}
-
-{{ partial "footer.html" . }}
