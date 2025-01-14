@@ -8,5 +8,11 @@
         <a href="{{ .URL }}" title="{{ .Title }}">>{{ .Name }}</a>
       {{ end }}
     {{ end }}
+    <!-- Dynamic Sections -->
+    {{ range .Site.Sections }}
+      {{ if ne .Kind "taxonomy" }} <!-- Exclude taxonomy sections -->
+        <a href="{{ .Permalink }}" title="{{ .Title }}">>{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
   </div>
 </div>

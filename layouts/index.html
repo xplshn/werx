@@ -1,23 +1,37 @@
 {{ define "main" }}
-  {{if not .IsHome }}
+  {{ if not .IsHome }}
     <h1>{{ .Title }}</h1>
   {{ end }}
   {{ .Content }}
-  <h2>Recent Posts</h2>
-  <dl>
-    {{ range first 10 (where .Site.RegularPages "Section" "posts") }}
-      {{ if ne .Kind "section" }} <!-- Exclude the section page itself -->
-        <dt>
-          <span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </dt>
-        <dd>
-          <p>{{ .Summary }}</p>
-          {{ if .Truncated }}
-            <a href="{{ .Permalink }}">Read more...</a>
-          {{ end }}
-        </dd>
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ if gt (len $posts) 0 }}
+    <h2>Recent Posts</h2>
+    <dl>
+      {{ range first 10 $posts }}
+        {{ if ne .Kind "section" }} <!-- Exclude the section page itself -->
+          <dt>
+            <span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
+            <a href="{{ .Permalink }}">{{ .Title }} &ndash; </a>
+              {{ if isset .Params "author" }}
+                  <span class="author">
+                    by
+                    <a href="mailto:{{ .Params.author.email }}">
+                      {{ .Params.author.name }}
+                    </a>
+                  </span>
+              {{ else }}
+                  <span class="author">by Unknown</span>
+              {{ end }}
+          </dt>
+          <dd>
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+              <a href="{{ .Permalink }}">Read more...</a>
+            {{ end }}
+          </dd>
+        {{ end }}
       {{ end }}
-    {{ end }}
-  </dl>
+    </dl>
+  {{ end }}
 {{ end }}
