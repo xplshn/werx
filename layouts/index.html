@@ -13,16 +13,7 @@
           <dt>
             <span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
             <a href="{{ .Permalink }}">{{ .Title }} &ndash; </a>
-              {{ if isset .Params "author" }}
-                  <span class="author">
-                    by
-                    <a href="mailto:{{ .Params.author.email }}">
-                      {{ .Params.author.name }}
-                    </a>
-                  </span>
-              {{ else }}
-                  <span class="author">by Unknown</span>
-              {{ end }}
+              {{ partial "author.html" . }}
           </dt>
           <dd>
             <p>{{ .Summary }}</p>

@@ -1,8 +1,14 @@
 {{ define "main" }}
   <div class="article-meta">
     <h1><span class="title">{{ .Title }}</span></h1>
-    {{ with .Params.author.name }}<h2 class="author">by {{ . }}</h2>{{ end }}
-    {{ if .Params.date }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+    {{ if .Params.author.name }}
+        <span class="author">{{ partial "author.html" . }}</span>
+        {{ if .Params.date }}
+            &ndash; <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+        {{ end }}
+    {{ else if .Params.date }}
+        <b class="date">{{ .Date.Format "2006/01/02" }}</b>
+    {{ end }}
     <p class="terms">
       {{ range $i := (slice "categories" "tags") }}
         {{ with ($.Param $i) }}

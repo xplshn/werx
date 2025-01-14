@@ -10,6 +10,7 @@
         <li>
           <span class="date">{{ .Date.Format "2006/01/02" }} &ndash; </span>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="author"> &ndash; {{ partial "author.html" . }}</span>
         </li>
       {{ end }}
     </ul>

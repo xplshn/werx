@@ -1,0 +1,10 @@
+{{ if isset .Params "author" }}
+    <span class="author">
+      by
+      <a href="mailto:{{ .Params.author.email }}">
+        {{ .Params.author.name }}
+      </a>
+    </span>
+{{ else }}
+    <span class="author">by Unknown</span>
+{{ end }}
