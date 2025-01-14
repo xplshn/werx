@@ -26,7 +26,7 @@
     </div>
     <div class="pull-right">
       |
-      {{ range .Site.Menus.feed }}
+      {{ range .Site.Menus.feed.ByWeight }}
         <a href="{{ .URL }}">{{ .Name | lower }}</a> |
       {{ end }}
     </div>
