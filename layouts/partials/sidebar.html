@@ -10,7 +10,7 @@
     {{ end }}
     <!-- Dynamic Sections -->
     {{ range .Site.Sections }}
-      {{ if ne .Kind "taxonomy" }} <!-- Exclude taxonomy sections -->
+      {{ if ne .Kind "taxonomy" }}
         <a href="{{ .Permalink }}" title="{{ .Title }}">>{{ .Title }}</a>
       {{ end }}
     {{ end }}

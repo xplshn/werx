@@ -1,6 +1,24 @@
 <div id="header">
   <div class="super">
     <div class="pull-left">
+      <!-- Menu toggle checkbox -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-button">X</label>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const menuToggle = document.getElementById('menu-toggle');
+          const sidebar = document.getElementById('sidebar');
+      
+          menuToggle.addEventListener('change', function() {
+            if (menuToggle.checked) {
+              sidebar.style.transform = 'translateX(0)';
+            } else {
+              sidebar.style.transform = 'translateX(-100%)';
+            }
+          });
+        });
+      </script>
+      <!-- E|Menu toggle checkbox -->
       |
       {{ range .Site.Params.subdomains }}
         <a href="{{ .URL }}">{{ .Name | lower }}</a> |
@@ -21,4 +39,3 @@
     </h1>
   </div>
 </div>
-
