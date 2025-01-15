@@ -1,18 +1,20 @@
-<div id="sidebar">
+<nav id="side-bar">
   <div>
+    <ul>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
       {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-        <a class="thisPage" href="{{ .URL }}" title="{{ .Title }}">>>{{ .Name }}</a>
+        <li><a class="thisPage" href="{{ .URL }}" title="{{ .Title }}">&rsaquo; {{ .Name }}</a></li>
       {{ else }}
-        <a href="{{ .URL }}" title="{{ .Title }}">>{{ .Name }}</a>
+        <li><a href="{{ .URL }}" title="{{ .Title }}">&rsaquo; {{ .Name }}</a></li>
       {{ end }}
     {{ end }}
     <!-- Dynamic Sections -->
     {{ range .Site.Sections }}
       {{ if ne .Kind "taxonomy" }}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">>{{ .Title }}</a>
+        <li><a href="{{ .Permalink }}" title="{{ .Title }}">&rsaquo; {{ .Title }}</a></li>
       {{ end }}
     {{ end }}
+    </ul>
   </div>
-</div>
+</nav>

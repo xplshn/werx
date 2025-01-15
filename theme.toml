@@ -1,18 +1,18 @@
-name = "Hugo - Works"
-license = "MIT"
+name = "WERX"
+license = "ISC" # Pre-2007 ISC license
 licenselink = "https://github.com/pard68/hugo-works/blob/master/LICENSE.md"
-description = "A minimal blog theme. Based off hugo-classic by goodroot. Styled after werc by cat-v."
-homepage = "https://www.0x44.pw"
-tags = ["minimal", "blog", "personal", "simple", "clean", "starter", "minimalist"]
-features = ["blog"]
-min_version = "0.0.1"
+description = "A complete rewrite of hugo-werx, a 1:1 replica of the style of cat-v.org|werc.cat-v.org"
+homepage = "https://xplshn.github.io/werx"
+tags = ["minimal", "blog", "documentation", "personal", "simple", "clean", "minimalist", "suckless", "vanilla html", "vanilla css"]
+features = ["blog", "docs"]
+min_version = "0.80.0"
 
 [author]
+  author = "xplshn"
+  homepage = "https://xplshn.github.io/werx"
+  repo = "https://github.com/xplshn/hugo-werx"
+
+[original]
   author = "Ian Pringle"
   homepage = "https://www.0x44.pw/"
   repo = "https://github.com/pard68/hugo-works"
-
-[original]
-  name = "Kellen Evan Person"
-  homepage = "https://goodroot.ca"
-
