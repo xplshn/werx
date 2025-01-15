@@ -19,7 +19,7 @@ Once you've done this, you've got yourself and your readers a nice site, hosted 
 - SerenityOS Emoji font, it is imported in baseof.html, because I wanted emojis to render correctly and to not break monospacing. + It looks nice!
 - The creator of the original hugo theme, even if I've already removed all custom classes and now this has become a 1:1 port of werc, I used the original theme for a while, and it actually looked almost as good as cat-v.org
 - The enlightened people over at the Cat-v.org Random Contrarian Insurgent Organization
-- Plan 9 for reigniting my interest in computing and giving me hopes that there exists a viable alternative to all of this BS (unix, unix clones, copylefted crap, communist warez, paid warez, poorly written C++ games designed for Windows and ported to Linux via a gigantic compat layer, web "technology", javascript, xml, and anything derived from xml, that includes html.)
+- Plan 9 for reigniting my interest in computing and giving me hopes that there exists a viable alternative to all of this BS (unix, unix clones, copylefted crap, communist warez, paid warez, poorly written C++ games designed for Windows and ported to Linux via a gigantic compat layer, web "technology", javascript, xml, and anything derived from xml, that includes html, OOP, etc)
 
 ## License
 
