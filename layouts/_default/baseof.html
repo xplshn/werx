@@ -10,6 +10,12 @@
   <meta name="application-name" content="{{ .Site.Title }}">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+
+  <style>
+    body{font-family:monospace;}
+    html{cursor: url('{{ "9cursor.png" | relURL }}'), auto;}
+  </style>
+
   <title>{{ .Title }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
