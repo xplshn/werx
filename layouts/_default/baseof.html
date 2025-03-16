@@ -19,12 +19,9 @@
   <title>{{ .Title }}</title>
   {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-      <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
-  {{ if .Params.themeVariant }}
-      <link rel="stylesheet" href="{{ "css/" | absURL }}{{ .Params.themeVariant }}">
-  {{ else }}
-      <link rel="stylesheet" href="{{ "css/theme_default.css" | absURL }}">
-  {{ end }}
+  <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+  {{ $themeVariant := .Params.themeVariant | default .Site.Params.themeVariant | default "theme_default.css" }}
+  <link rel="stylesheet" href="{{ "css/" | absURL }}{{ $themeVariant }}">
   <link rel="stylesheet" href="{{ "css/mermaid.css" | absURL }}">
   {{ range .Site.Params.customCSS -}}
     <link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
