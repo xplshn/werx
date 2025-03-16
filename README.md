@@ -12,7 +12,7 @@
 
 Once you've done this, you've got yourself and your readers a nice site, hosted for free, and updated whenever you push something. Now remember to add the UNLICENSE + optional ISC & MIT licenses to the repo, so that in case you do write something meaningful or useful, it can be used by others and benefits humanity.
 
-###### NOTE: The usage of contents/posts makes the section "Recent Posts" appear on your home page, where as using any other folder name will simply add the section to the sidebar, without altering the "Recent Posts" section.
+###### NOTE: The usage of ./contents/posts makes the section "Recent Posts" appear on your home page, where as using any other folder name will simply add the section to the sidebar, without altering the "Recent Posts" section.
 
 ##### Acknoledgements:
 - 9cursor, the asset comes from Plan 9 and is not part of the original WERC theme, but I think it is a nice touch.
