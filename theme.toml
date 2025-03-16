@@ -1,6 +1,6 @@
 name = "WERX"
 license = "ISC" # Pre-2007 ISC license
-licenselink = "https://github.com/pard68/hugo-works/blob/master/LICENSE.md"
+licenselink = "https://github.com/xplshn/werx/blob/master/LICENSE.ISC"
 description = "A complete rewrite of hugo-werx, a 1:1 replica of the style of cat-v.org|werc.cat-v.org"
 homepage = "https://xplshn.github.io/werx"
 tags = ["minimal", "blog", "documentation", "personal", "simple", "clean", "minimalist", "suckless", "vanilla html", "vanilla css"]
@@ -11,8 +11,3 @@ min_version = "0.80.0"
   author = "xplshn"
   homepage = "https://xplshn.github.io/werx"
   repo = "https://github.com/xplshn/hugo-werx"
-
-[original]
-  author = "Ian Pringle"
-  homepage = "https://www.0x44.pw/"
-  repo = "https://github.com/pard68/hugo-works"

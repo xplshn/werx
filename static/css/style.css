@@ -47,13 +47,20 @@ table { border: 1px solid rgba(128,128,128,0.5); padding: 0; }
 th { color: var(--super-text); background-color: var(--super-accent); }
 tr:nth-child(odd) { background-color: rgba(128,128,128,0.1)  }
 
-/* Responsive Design */
+/* Let people decide which elements should not be printed */
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
 
+/* Responsive Design */
+/* Collapsible sidebar
 input#menu-toggle {
   display: none;
 }
-
-/* Collapsible sidebar
 .menu-button {
   display: none;
   cursor: pointer;

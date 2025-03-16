@@ -1,4 +1,8 @@
+{{ if .Site.Params.printSidebar }}
 <nav id="side-bar">
+{{ else }}
+<nav id="side-bar" class="no-print">
+{{ end }}
   <div>
     <ul>
     {{ $currentPage := . }}
