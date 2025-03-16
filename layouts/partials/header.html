@@ -1,5 +1,6 @@
 <header>
     <nav>
+    <!-- Collapsible sidebar
     <input type="checkbox" id="menu-toggle" value="0">
     <label for="menu-toggle" class="menu-button">X</label>
     <script>
@@ -15,6 +16,7 @@
           });
         });
     </script>
+    -->
     <div class="left">
       {{ range .Site.Params.subdomains }}
         <a href="{{ .URL }}">{{ .Name | lower }}</a> |
