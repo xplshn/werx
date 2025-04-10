@@ -22,10 +22,11 @@
   <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
   {{ $themeVariant := .Params.themeVariant | default .Site.Params.themeVariant | default "theme_default.css" }}
   <link rel="stylesheet" href="{{ "css/" | absURL }}{{ $themeVariant }}">
-  <link rel="stylesheet" href="{{ "css/mermaid.css" | absURL }}">
+
   {{ range .Site.Params.customCSS -}}
     <link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
   {{- end }}
+
   {{ with .OutputFormats.Get "RSS" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{- end }}
@@ -56,6 +57,22 @@
     }
   })();
   </script>
+
+  <!-- Mermaid support -->
+  {{ if .Store.Get "hasMermaid" }}
+    <link rel="stylesheet" href="{{ "css/mermaid.css" | absURL }}">
+    <script type="module">
+      import mermaid from '{{ "/js/mermaid.min.js" | absURL }}';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  {{ end }}
+  <!-- Syntax highlight and MathJax support -->
+  <script src="{{ "/js/tex-mml-svg.js" | absURL }}"></script>
+  <script src="{{ "/js/highlight.min.js" | absURL }}"></script>
+  <script src="{{ "/js/highlight-basic.min.js" | absURL }}"></script>
+  <script src="{{ "/js/highlight-bash.min.js" | absURL }}"></script>
+  <script src="{{ "/js/highlight-go.min.js" | absURL }}"></script>
+  <script src="{{ "/js/highlight-c.min.js" | absURL }}"></script>
 </head>
 <body>
   {{ partial "header.html" . }}
@@ -64,12 +81,5 @@
     {{ block "main" . }}{{ end }}
   </article>
   {{ partial "footer.html" . }}
-
-  {{ if .Store.Get "hasMermaid" }}
-  	<script type="module">
-  	  import mermaid from '{{ "/js/mermaid.min.js" | absURL }}';
-  	  mermaid.initialize({ startOnLoad: true });
-  	</script>
-  {{ end }}
 </body>
 </html>
