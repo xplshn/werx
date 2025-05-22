@@ -64,10 +64,45 @@
     }
   })();
   </script>
+
+  <!-- Mermaid support -->
+  {{ if .HasShortcode "mermaid" }}
+    <link rel="stylesheet" href="{{ "css/mermaid.css" | absURL }}">
+    <script async type="application/javascript" src='{{ "/js/mermaid.min.js" | absURL }}'>
+      mermaid.initialize({ startOnLoad: true });
+      console.log("WERX: MermaidJS shortcode: Loaded")
+    </script>
+  {{ end }}
+  <!-- JS support -->
+  {{ if .HasShortcode "js" }}
+    <script type="application/javascript" src='{{ "/js/custom-js-lib.min.js" | absURL }}'>
+      console.log("WERX: JS Shortcode: Loaded")
+    </script>
+  {{ end }}
+  <!-- ChartJS support -->
+  {{ if .HasShortcode "chart" }}
+    <script type="application/javascript" src='{{ "/js/chart.min.js" | absURL }}'>
+        console.log("WERX: ChartJS shortcode: Loaded")
+    </script>
+  {{ end }}
+  <!-- D3JS support -->
+  {{ if .HasShortcode "d3js" }}
+    <script type="application/javascript" src='{{ "/js/d3.min.js" | absURL }}'>
+      console.log("WERX: D3JS shortcode: Loaded")
+    </script>
+    <script type="application/javascript" src='{{ "/js/topojson.min.js" | absURL }}'>
+      console.log("WERX: TopoJSON shortcode: Loaded")
+    </script>
+    <script type="application/javascript" src='{{ "/js/topojson-client.min.js" | absURL }}'>
+      console.log("WERX: TopoJSON-Client shortcode: Loaded")
+    </script>
+  {{ end }}
+
 </head>
 <body>
   {{ partial "header.html" . }}
   {{ partial "sidebar.html" . }}
+
   <article id="main">
     {{ block "main" . }}{{ end }}
   </article>
@@ -78,6 +113,25 @@
     <link rel="stylesheet" href="{{ "css/mermaid.css" | absURL }}">
     <script async type="application/javascript" src='{{ "/js/mermaid.min.js" | absURL }}'>
       mermaid.initialize({ startOnLoad: true });
+      console.log("WERX: MermaidJS: Loaded")
+    </script>
+  {{ end }}
+  <!-- ChartJS support -->
+  {{ if .Store.Get "hasChart" }}
+    <script type="application/javascript" src='{{ "/js/chart.min.js" | absURL }}'>
+      console.log("WERX: ChartJS: Loaded")
+    </script>
+  {{ end }}
+  <!-- D3JS support -->
+  {{ if .Store.Get "hasD3JS" }}
+    <script type="application/javascript" src='{{ "/js/d3.min.js" | absURL }}'>
+      console.log("WERX: D3JS: Loaded")
+    </script>
+    <script type="application/javascript" src='{{ "/js/topojson.min.js" | absURL }}'>
+      console.log("WERX: TopoJSON: Loaded")
+    </script>
+    <script type="application/javascript" src='{{ "/js/topojson-client.min.js" | absURL }}'>
+      console.log("WERX: TopoJSON-Client: Loaded")
     </script>
   {{ end }}
 </body>
