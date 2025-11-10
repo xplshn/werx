@@ -9,11 +9,11 @@ CDN_HIGHLIGHTJS_BASIC="https://unpkg.com/@highlightjs/cdn-assets/languages/basic
 CDN_HIGHLIGHTJS_BASH="https://unpkg.com/@highlightjs/cdn-assets/languages/bash.min.js"
 CDN_HIGHLIGHTJS_GO="https://unpkg.com/@highlightjs/cdn-assets/languages/go.min.js"
 CDN_HIGHLIGHTJS_C="https://unpkg.com/@highlightjs/cdn-assets/languages/c.min.js"
-CDN_MATHJAX="https://www.unpkg.com/mathjax/es5/tex-mml-svg.js"
+CDN_MATHJAX="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
 CDN_CHARTJS="https://cdn.jsdelivr.net/npm/chart.js"
 CDN_D3JS="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"
 CDN_TOPOJS="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"
-CDN_TOPOJS_CLIENT="https://unpkg.com/topojson-client@3.0.1/dist/topojson-client.min.js"
+CDN_TOPOJS_CLIENT="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"
 
 fetch() {
     mode="$1"     # empty | --minimize | --minimize-and-bundle
@@ -59,7 +59,7 @@ fetch "" "$CDN_HIGHLIGHTJS_BASIC" ./static/js/highlight-basic.min.js
 fetch "" "$CDN_HIGHLIGHTJS_BASH" ./static/js/highlight-bash.min.js
 fetch "" "$CDN_HIGHLIGHTJS_GO" ./static/js/highlight-go.min.js
 fetch "" "$CDN_HIGHLIGHTJS_C" ./static/js/highlight-c.min.js
-fetch --minimize-and-bundle "$CDN_MATHJAX" ./static/js/tex-mml-svg.js
+fetch --minimize-and-bundle "$CDN_MATHJAX" ./static/js/tex-mml-chtml.js
 fetch --minimize "$CDN_CHARTJS" ./static/js/chart.min.js
 fetch "" "$CDN_D3JS" ./static/js/d3.min.js
 fetch "" "$CDN_TOPOJS" ./static/js/topojson.min.js

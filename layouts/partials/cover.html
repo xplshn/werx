@@ -1,0 +1,96 @@
+{{- if .Params.cover_page -}}
+{{ $authors := .Params.authors }}
+{{ $blacklist := slice "publishdate" "lastmod" "iscjklanguage" "lang" "draft" "title" "cover_page" "cover_style" "date" }}
+
+<style>
+/* Hide the cover page by default */
+#cover-page { display: none; }
+
+@media print {
+  /* Hide only the article metadata */
+  .article-meta, .article-meta * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Show only the cover page during print */
+  #cover-page {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    font-family: "Noto Serif", "Times New Roman", serif;
+    color: var(--fg-color, #000);
+    background: var(--bg-color, #fff);
+    page-break-after: always; /* break after cover page only */
+    min-height: 95vh; /* avoid forcing extra page */
+  }
+
+  #cover-page img {
+    max-width: 150px;
+    margin-bottom: 2rem;
+  }
+
+  #cover-page h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  #cover-page p {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+    text-align: left;
+  }
+
+  #cover-page .field-label { font-weight: bold; }
+
+  /* Cover styles strictly scoped to #cover-page */
+  {{ if eq .Params.cover_style "minimal" }}
+  #cover-page {
+    justify-content: center;
+    padding: 5rem 2rem;
+  }
+  #cover-page h1 { font-size: 3rem; text-align: center; width: 100%; }
+  #cover-page p { text-align: center; }
+  {{ else if eq .Params.cover_style "classic" }}
+  #cover-page { padding: 3rem; border: 2px solid #000; background: #fdfdfd; }
+  #cover-page h1 { font-size: 2.7rem; margin-bottom: 2rem; text-align: left; }
+  {{ else if eq .Params.cover_style "modern" }}
+  #cover-page { font-family: "Helvetica", sans-serif; padding: 4rem 2rem; border-left: 10px solid #000; }
+  #cover-page h1 { font-size: 2.2rem; text-transform: uppercase; }
+  {{ end }}
+
+  @page { size: A4; margin: 2cm; }
+}
+</style>
+
+<section id="cover-page">
+  {{ if .Params.cover_logo }}
+    <img src="{{ .Params.cover_logo }}" alt="Logo">
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+
+  {{ if $authors }}
+    <p><span class="field-label">Autor{{ if gt (len $authors) 1 }}es{{ end }}:</span>
+      {{ range $i, $a := $authors }}{{ if $i }}, {{ end }}{{ $a.name }}{{ end }}
+    </p>
+  {{ end }}
+
+  {{ if .Date }}
+    <p><span class="field-label">Fecha:</span> {{ .Date.Format "2 de January de 2006" }}</p>
+  {{ end }}
+
+  {{/* Print all other params except blacklisted ones */}}
+  {{ range $key, $value := .Params }}
+    {{ if not (in $blacklist $key) }}
+      {{ if ne $key "authors" }}
+        <p><span class="field-label">{{ $key | title }}:</span> {{ $value }}</p>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</section>
+{{- end -}}

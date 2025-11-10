@@ -33,12 +33,12 @@
   <link href='{{ "/css/SerenityOS-Emoji.css" | absURL }}' rel="stylesheet" type="text/css">
   <link href='{{ "/css/highlightjs_style.css" | absURL }}' rel="stylesheet" type="text/css">
   <!-- Syntax highlight and MathJax support -->
-  <script src="{{ "/js/tex-mml-svg.js" | absURL }}"></script>
-  <script src="{{ "/js/highlight.min.js" | absURL }}"></script>
-  <script src="{{ "/js/highlight-basic.min.js" | absURL }}"></script>
-  <script src="{{ "/js/highlight-bash.min.js" | absURL }}"></script>
-  <script src="{{ "/js/highlight-go.min.js" | absURL }}"></script>
-  <script src="{{ "/js/highlight-c.min.js" | absURL }}"></script>
+  <script id="MathJax-script" async src="{{ "/js/tex-mml-chtml.js" | absURL }}"></script>
+  <script                     async src="{{ "/js/highlight.min.js" | absURL }}"></script>
+  <script                     async src="{{ "/js/highlight-basic.min.js" | absURL }}"></script>
+  <script                     async src="{{ "/js/highlight-bash.min.js" | absURL }}"></script>
+  <script                     async src="{{ "/js/highlight-go.min.js" | absURL }}"></script>
+  <script                     async src="{{ "/js/highlight-c.min.js" | absURL }}"></script>
   <!-- Automagically center images. Original Author Yihui Xie: https://yihui.name -->
   <script>
   (function() {
@@ -95,6 +95,12 @@
     </script>
     <script type="application/javascript" src='{{ "/js/topojson-client.min.js" | absURL }}'>
       console.log("WERX: TopoJSON-Client shortcode: Loaded")
+    </script>
+  {{ end }}
+  <!-- Previews support -->
+  {{ if .Store.Get "hasPrev" }}
+    <script type="application/javascript" src='{{ "/js/preview.js" | absURL }}'>
+    console.log("WERX: previews: Loaded")
     </script>
   {{ end }}
 
