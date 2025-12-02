@@ -1,9 +1,5 @@
----
-title: ''
-date: ''
-[params]
-themeVariant="theme_default.css"
-  [params.author]
-    name = ''
-    email = ''
----
++++
+date = '{{ .Date }}'
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
++++

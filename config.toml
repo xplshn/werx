@@ -1,0 +1,102 @@
+title = "anto's website"
+baseURL = "https://xplshn.com.ar/"
+languageCode = "en-us"
+theme = "werx"
+publishDir = "pub"
+enableRobotsTXT = true
+
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+#[[menu.main]]
+#    name = "Categories"
+#    url = "/categories/"
+#    weight = 2
+#[[menu.main]]
+#    name = "Tags"
+#    url = "/tags/"
+#    weight = 3
+[[menu.feed]]
+    name = "Subscribe"
+    url = "/index.xml"
+    weight = 100
+[[menu.feed]]
+    name = "git.xplshn.com.ar"
+    url = "https://git.xplshn.com.ar"
+    weight = 90
+[[menu.feed]]
+    name = "harmful.cat-v.org"
+    url = "https://harmful.cat-v.org"
+    weight = 80
+[[menu.feed]]
+    name = "nosystemd.org"
+    url = "https://nosystemd.org"
+    weight = 70
+[[menu.feed]]
+    name = "suckless.org"
+    url = "https://suckless.org"
+    weight = 60
+[[menu.feed]]
+    name = "copacabana.pindorama.net.br"
+    url = "https://copacabana.pindorama.net.br"
+    weight = 50
+[[menu.feed]]
+    name = "shithub.us"
+    url = "https://shithub.us"
+    weight = 40
+[[menu.feed]]
+    name = "managainstthestate.blogspot.com"
+    url = "https://web.archive.org/web/20231123031907/https://managainstthestate.blogspot.com/2011/08/anarcho-capitalist-resources-by-wesker.html"
+    weight = 20
+[[menu.feed]]
+    name = "musl.libc.org"
+    url = "https://musl.libc.org"
+    weight = 10
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+[params]
+    subtitle = "one of these days"
+    brandIconFile = "assets/images/icon.svg"
+    abbrDateFmt = "Jan 2"
+    dateFmt = "01.02.2006 15:04"
+    themeVariant = "theme_blue.css"
+    printSidebar = false
+
+[[social]]
+    name = "Github"
+    url = "https://github.com/xplshn"
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+
+[markup.goldmark.extensions]
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)']]
+
+[markup.goldmark.renderHooks.image]
+enableDefault = true
