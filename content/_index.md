@@ -62,7 +62,7 @@ The `prev` shortcode creates hover-activated popups for URL previews.
 {{< js >}}
 console.log("WERX JS shortcode executed!");
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("Page loaded with JS shortcode support");
+  console.log("Hello from inline JS shortcode");
 });
 {{< /js >}}
 
@@ -147,12 +147,10 @@ d3.select("body")
 
 WERX supports special fenced code blocks that render as interactive content.
 
-Always prefer the shortcode version compared to the renderhook version, except for Mermaid
-
 ### Mermaid Diagrams
 
-```mermaid
-graph TD
+{{< mermaid >}}
+  graph TD
     A[WERX Theme] --> B[Shortcodes]
     A --> C[Render Hooks]
     B --> D[prev]
@@ -162,16 +160,23 @@ graph TD
     C --> H[mermaid]
     C --> I[inlineChartJS]
     C --> J[inlineJS]
-```
+{{< /mermaid >}}
 
 **Usage:**
-````markdown
-```mermaid
-graph TD
+```go
+{{</* mermaid */>}}
+  graph TD
     A[WERX Theme] --> B[Shortcodes]
     A --> C[Render Hooks]
+    B --> D[prev]
+    B --> E[js]
+    B --> F[chart]
+    B --> G[d3js]
+    C --> H[mermaid]
+    C --> I[inlineChartJS]
+    C --> J[inlineJS]
+{{</* /mermaid */>}}
 ```
-````
 
 ## Math Typesetting
 
