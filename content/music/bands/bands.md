@@ -249,7 +249,7 @@ Contemporary Japanese rock spanning indie, math rock, and alternative styles.
 
 ## Genre Relationships & Influences
 
-```mermaid
+{{< mermaid >}}
 graph TB
     Classical[Classical Music] --> ProgRock[Progressive Rock]
     Classical --> Jazz[Jazz]
@@ -282,7 +282,7 @@ graph TB
     style Classical fill:#bbf,stroke:#333,stroke-width:2px
     style Jazz fill:#bfb,stroke:#333,stroke-width:2px
     style Blues fill:#fbb,stroke:#333,stroke-width:2px
-```
+{{< /mermaid >}}
 
 ## Interactive Genre Timeline
 
