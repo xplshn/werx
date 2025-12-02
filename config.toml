@@ -1,5 +1,5 @@
-title = "anto's website"
-baseURL = "https://xplshn.com.ar/"
+title = "WERX DEMO"
+baseURL = "https://werx.xplshn.com.ar/"
 languageCode = "en-us"
 theme = "werx"
 publishDir = "pub"
