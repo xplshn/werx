@@ -73,12 +73,13 @@
       console.log("WERX: MermaidJS shortcode: Loaded")
     </script>
   {{ end }}
-  <!-- JS support -->
+  <!-- ~~JS support~~ This is completely useless. The JS shortcode doesn't need initialization here
   {{ if .HasShortcode "js" }}
     <script type="application/javascript" src='{{ "/js/custom-js-lib.min.js" | absURL }}'>
       console.log("WERX: JS Shortcode: Loaded")
     </script>
   {{ end }}
+  -->
   <!-- ChartJS support -->
   {{ if .HasShortcode "chart" }}
     <script type="application/javascript" src='{{ "/js/chart.min.js" | absURL }}'>
