@@ -115,15 +115,15 @@ Django Reinhardt's hot club style and European jazz traditions.
 
 Politically conscious folk-influenced music from Latin America, poetry-driven songwriting.
 
-- **Silvio Rodríguez** — Cuban nueva trova, poetic revolutionary song
-- **José Larralde** — Argentine folk, working-class social commentary
+- **Silvio Rodríguez** — Cuban nueva trova
+- **José Larralde** — Argentine folk, payador
 
 ## World Music & Balkan Brass
 
 Traditional music from global contexts, folk instruments in contemporary settings.
 
 - **Emir Kusturica & The No Smoking Orchestra** — Balkan brass, punk energy with Romani influences
-- **Buena Vista Social Club** — Cuban son, traditional Afro-Cuban music revival
+- **Buena Vista Social Club** — Cuban son, guajira
 
 ## Tango Clásico
 
@@ -134,7 +134,7 @@ Traditional Argentine tango from the golden age, orquestas típicas and the canc
 - **Julio Sosa** — "El varón del tango," powerful masculine delivery
 - **Alberto Podestá** — Classic tango vocalist
 - **Roberto Goyeneche** — "El Polaco," expressive phrasing and rubato
-- **Tita Merello** — Tango singer and actress, working-class voice
+- **Tita Merello** — Tango singer and actress
 
 {{< prev URL="https://es.wikipedia.org/wiki/Carlos_Gardel" TEXT="Carlos Gardel" >}}
 
