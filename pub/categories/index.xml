@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on anto&#39;s website</title>
+    <link>https://xplshn.com.ar/categories/</link>
+    <description>Recent content in Categories on anto&#39;s website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xplshn.com.ar/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documentation</title>
+      <link>https://xplshn.com.ar/categories/documentation/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://xplshn.com.ar/categories/documentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Examples</title>
+      <link>https://xplshn.com.ar/categories/examples/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://xplshn.com.ar/categories/examples/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>https://xplshn.com.ar/categories/music/</link>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://xplshn.com.ar/categories/music/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
