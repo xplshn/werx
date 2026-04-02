@@ -1,3 +1,6 @@
+> You may want to check out my new Hugo theme, it has the same print-ready features as this one.
+> https://github.com/nein-ar/quixotist - https://nein.ar
+---
 ### Werx
 
  - This is a straight port of werc.cat-v.org's style + the "vanity" css of cat-v.org that we all love.
