@@ -1,7 +1,8 @@
 ### Werx
 
  - This is a straight port of werc.cat-v.org's style + the "vanity" css of cat-v.org that we all love.
- - Via the inclusion of @media, the site supports dark & light devices, as well as small screens. This can, of course, be completely removed. The CSS of cat-v.org can be used as the style.css of this theme, without any problems, just remember to hide the only new class I added, that is: .menu-toggle
+ - Via the inclusion of @media, the site supports dark & light devices, as well as small screens. This can, of course, be completely removed. The CSS of cat-v.org can be used as the style.css of this theme, without any problems
+ - This theme is also suitable for producing PDFs via CTRL+P, the site is not only printable, but it is what I use to produce school reports, etc, so a few shortcode features are included, which you can see in action at https://werx.xplshn.com.ar, you can also produce "cover pages" via frontmatter metadata. These features are all completely optional, and are not included into ./public/ at all if you don't use them, they do not interfere at all with normal usage
 
 ### Usage
  - Create and initialize a git repo
